@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "N-dimentional point implementation",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "mocha test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stein197/js-point.git"
@@ -21,5 +25,11 @@
   "homepage": "https://github.com/stein197/js-point#readme",
   "dependencies": {
     "@stein197/ts-util": "1.3.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "9.1.1",
+    "mocha": "10.0.0",
+    "should": "13.2.3",
+    "typescript": "4.6.4"
   }
 }
