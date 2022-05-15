@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"outDir": ".",
+		"target": "ESNext",
+		"module": "CommonJS",
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"declaration": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true
+	},
+	"include": [
+		"."
+	],
+	"exclude": []
+}

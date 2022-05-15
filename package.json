@@ -1,0 +1,25 @@
+{
+  "name": "@stein197/point",
+  "version": "1.0.0",
+  "description": "N-dimentional point implementation",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stein197/js-point.git"
+  },
+  "keywords": [
+    "point",
+    "2d",
+    "3d"
+  ],
+  "author": "Nail' Gafarov <nil20122013@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stein197/js-point/issues"
+  },
+  "homepage": "https://github.com/stein197/js-point#readme",
+  "dependencies": {
+    "@stein197/ts-util": "1.3.2"
+  }
+}
