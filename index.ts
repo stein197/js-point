@@ -17,8 +17,6 @@ export default class Point implements Cloneable<Point>, Equalable<Point> {
 	}
 
 	public equals(obj: Point): boolean {
-		if (this.vector.length !== obj.vector.length)
-			return false;
-		return this.vector.every((n, i) => obj.vector[i] === n);
+		return this.vector.length === obj.vector.length && this.vector.every((n, i) => obj.vector[i] === n);
 	}
 }
