@@ -4,6 +4,10 @@ export default class Point implements Cloneable<Point>, Equalable<Point> {
 
 	public constructor(public readonly vector: number[]) {}
 
+	public toString(): string {
+		return `[${this.vector.join(", ")}]`;
+	}
+
 	public clone(): Point {
 		return new Point(this.vector.slice());
 	}
