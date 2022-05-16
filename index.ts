@@ -65,19 +65,10 @@ export default class Point<N extends number> implements Cloneable<Point<N>>, Equ
 		return `[${this.vector.join(", ")}]`;
 	}
 
-	/**
-	 * Creates a clone of the point.
-	 * @returns A clone.
-	 */
 	public clone(): Point<N> {
 		return new Point(...this.vector);
 	}
 
-	/**
-	 * Checks if the passed point is equal to the current one. Equals points have the same coordinates.
-	 * @param obj Point to compare.
-	 * @returns `true` if two points are equal.
-	 */
 	public equals(obj: Point<N>): boolean {
 		// @ts-ignore
 		return this.vector.length === obj.vector.length && this.vector.every((n, i) => obj.vector[i] === n);
