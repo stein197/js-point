@@ -9,6 +9,23 @@ mocha.describe("Point", () => {
 		mocha.it("Point.y should return the second number", () => Point.create<2>(1, 2).y.should.be.eql(2));
 		mocha.it("Point.z should return the third number", () => Point.create<3>(1, 2, 3).z.should.be.eql(3));
 	});
+	mocha.describe("Setters", () => {
+		mocha.it("Point.x should set the value to the first number", () => {
+			const p = Point.create<1>(1);
+			p.x = 10;
+			p.x.should.be.eql(10);
+		});
+		mocha.it("Point.y should set the value to the second number", () => {
+			const p = Point.create<2>(1, 2);
+			p.y = 10;
+			p.y.should.be.eql(10);
+		});
+		mocha.it("Point.z should set the value to the third number", () => {
+			const p = Point.create<3>(1, 2, 3);
+			p.z = 10;
+			p.z.should.be.eql(10);
+		});
+	});
 	mocha.it("toString() should return correct result", () => {
 		new Point<1>(1).toString().should.be.equal("[1]");
 		new Point<2>(1, 1.5).toString().should.be.equal("[1, 1.5]");

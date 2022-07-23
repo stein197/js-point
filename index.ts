@@ -36,16 +36,34 @@ export default class Point<N extends number> implements Cloneable<Point<N>>, Equ
 		return this.vector[0];
 	}
 
+	/** Set the value to the first number of the vector */
+	public set x(value: number) {
+		// @ts-ignore
+		this.vector[0] = value;
+	}
+
 	/** The second number of the vector */
 	public get y(): N extends 1 ? never : number {
 		// @ts-ignore
 		return this.vector[1];
 	}
 
+	/** Set the value to the second number of the vector */
+	public set y(value: number) {
+		// @ts-ignore
+		this.vector[1] = value;
+	}
+
 	/** The third number of the vector */
 	public get z(): N extends 1 | 2 ? never : number {
 		// @ts-ignore
 		return this.vector[2];
+	}
+
+	/** Set the value to the third number of the vector */
+	public set z(value: number) {
+		// @ts-ignore
+		this.vector[2] = value;
 	}
 
 	/**
