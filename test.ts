@@ -4,6 +4,11 @@ import "should";
 
 mocha.describe("Point", () => {
 	mocha.it("Passed arguments should construct the vector array", () => new Point<2>(1, 2).vector.should.be.eql([1, 2]));
+	mocha.describe("Getters", () => {
+		mocha.it("Point.x should return the first number", () => Point.create<1>(1).x.should.be.eql(1));
+		mocha.it("Point.y should return the second number", () => Point.create<2>(1, 2).y.should.be.eql(2));
+		mocha.it("Point.z should return the third number", () => Point.create<3>(1, 2, 3).z.should.be.eql(3));
+	});
 	mocha.it("toString() should return correct result", () => {
 		new Point<1>(1).toString().should.be.equal("[1]");
 		new Point<2>(1, 1.5).toString().should.be.equal("[1, 1.5]");
