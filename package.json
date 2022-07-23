@@ -1,6 +1,6 @@
 {
   "name": "@stein197/point",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "N-dimentional point implementation",
   "main": "index.js",
   "scripts": {
