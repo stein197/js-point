@@ -30,6 +30,12 @@ p.x; // 1
 p.y; // Error - y does not exist
 ```
 
+## API
+| Method | Return type | Description |
+|---|---|---|
+| `Point<N>.getDistance(point: Point<N>)` | `number` | Resolves the distance length between two points |
+| `Point.interpolate<N>(p1: Point<N>, p2: Point<N>, t: number)` | `Point<N>` | Returns a new point at t between points p1 and p2 |
+
 ## NPM scripts
 - `build` builds the project
 - `test` runs unit tests
