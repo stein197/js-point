@@ -118,6 +118,18 @@ export default class Point<N extends number> implements Cloneable<Point<N>>, Equ
 	public static create<N extends number>(...vector: Tuple<N, number>): PointExclude<N> {
 		return new Point<N>(...vector);
 	}
+
+	/**
+	 * Returns a new point at {@link t} between points {@link p1} and {@link p2}.
+	 * @param p1 The first point.
+	 * @param p2 The second point.
+	 * @param t Interpolation point that accepts values in range [0, 1].
+	 * @returns An interpolated point vetween passed two.
+	 */
+	public static interpolate<N extends number>(p1: Point<N>, p2: Point<N>, t: number): Point<N> {
+		// @ts-ignore
+		return new Point(...p1.vector.map((n, i) => n + (p2.vector[i] - n) * t));
+	}
 }
 
 type PointExclude<N extends number> = Omit<Point<N>, N extends 1 ? (

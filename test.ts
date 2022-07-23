@@ -43,4 +43,7 @@ mocha.describe("Point", () => {
 		new Point<3>(1, 2, 3).getDistance(new Point(4, 5, 6)).should.be.approximately(5.19, 0.01);
 	});
 	mocha.it("create() works the same as the constructor", () => Point.create<2>(2, 3).vector.should.be.eql([2, 3]));
+	mocha.it("interpolate() should return the first point when t is 0", () => Point.interpolate(new Point<3>(0, 0, 0), new Point<3>(5, 5, 5), 0).vector.should.be.eql([0, 0, 0]));
+	mocha.it("interpolate() should return the second point when t is 1", () => Point.interpolate(new Point<3>(0, 0, 0), new Point<3>(5, 5, 5), 1).vector.should.be.eql([5, 5, 5]));
+	mocha.it("interpolate() should return correct value", () => Point.interpolate(new Point<3>(0, 0, 0), new Point<3>(5, 5, 5), .2).vector.should.be.eql([1, 1, 1]));
 });
