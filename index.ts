@@ -1,4 +1,4 @@
-import {Cloneable, Equalable} from "@stein197/ts-util";
+import {Cloneable, Equalable} from "@stein197/type";
 
 /**
  * Represents an N-dimentional point which can be applied in both two or three dimentions and more. Basic usage is:
