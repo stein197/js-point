@@ -1,6 +1,6 @@
 import Point from "./Point";
 
-// TODO: Tests, docs
+// TODO: Docs
 export = class Point2D extends Point {
 
 	public get x(): number {
