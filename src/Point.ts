@@ -57,6 +57,7 @@ export = class Point implements Cloneable<Point>, Equalable<Point> {
 	 * @param p2 The second point.
 	 * @param t Interpolation point that accepts values in range [0, 1].
 	 * @returns An interpolated point vetween passed two.
+	 * @throws {TypeError} When the points aren't compatible (they have different dimensions).
 	 */
 	public static interpolate(p1: Point, p2: Point, t: number): Point {
 		if (p1.vector.length !== p2.vector.length)

@@ -1,4 +1,4 @@
+/test/
 /tsconfig.json
 /*.ts
 !/*.d.ts
-/test.*
