@@ -3,8 +3,8 @@ import {Cloneable, Equalable} from "@stein197/type";
 /**
  * Represents an N-dimentional point which can be applied in both two or three dimentions and more. Basic usage is:
  * ```ts
- * let p = new Point<3>(0, 1, 2); // three-dimentional point
- * p.vector; // [0, 1, 2]: plain tuple
+ * let p = new Point(0, 1, 2); // three-dimentional point
+ * p.vector;                   // [0, 1, 2]
  * ```
  */
 export = class Point implements Cloneable<Point>, Equalable<Point> {
