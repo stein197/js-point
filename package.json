@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "ts-mocha test.ts"
+    "test": "ts-mocha test/**/*.ts"
   },
   "repository": {
     "type": "git",
